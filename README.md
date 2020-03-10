@@ -1,2 +1,4 @@
 # test1
-others
+- python shell
+- autoTest
+- selenium
