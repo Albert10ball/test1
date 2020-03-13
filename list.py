@@ -1,5 +1,5 @@
 # encoding=utf-8
-
+import plistlib
 member = [1, 2, 3, "nicek", ["baby", "乖乖"]]
 a = len(member)
 print(a)
@@ -35,4 +35,54 @@ member1 = member[:2]
 print(member1)
 member2 = member[2:]
 print(member2)
+
+
+list1 = [234]
+list2 = [567]
+if list1 < list2:
+    print(1)
+else:
+    print(2)
+
+list3 = list1 + list2
+print(list3)
+
+list4 = list3*3
+print(list4)
+
+t1 = "lin" not in list4
+print(t1)
+
+t2 = "lin" in list4
+print(t2)
+list5 = [[1, 2, 3], [2, 3, 4], 1, 4, 5]
+a1 = list5[1][1]
+a3 = list5[1]
+print(a1, a3)
+a2 = list5[3]
+print(a2)
+print(list5.count(1))   # 元素在list中出现的次数
+print(list5.index(4))  # 元素在list中的位置 index（a, b, c） a为元素，bc为位置范围
+
+list5.reverse()    # 反转列表
+print(list5)
+list6 = [3, 4, 1, 2, 44, 5, 8]
+list6.sort()     # 列表排序(正序)
+print(list6)
+list6.sort(reverse=True)  # 列表排序（倒序）
+print(list6)
+list7 = list6[:]   # 分片copy list6 与list7 = list6 的区别在于指向的对象列表不是同一主体
+print(list7)
+
+
+print(1111)
+# print("hello""\n", d1)
+
+
+
+
+
+
+
+
 
