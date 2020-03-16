@@ -91,7 +91,7 @@ temp1 = ("一心", "一意", "太多", "太少")
 temp1 = temp1[:2] + ("lin", ) + temp1[2:]
 print(temp1)
 
-# 字符串操作
+# 字符串内置操作方法
 str1 = "My love is xing!"
 print(str1[:6])
 print(str1[3])
