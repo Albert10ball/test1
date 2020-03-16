@@ -1,5 +1,5 @@
 # encoding=utf-8
-import plistlib
+
 member = [1, 2, 3, "nicek", ["baby", "乖乖"]]
 a = len(member)
 print(a)
