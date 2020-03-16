@@ -91,11 +91,56 @@ temp1 = ("一心", "一意", "太多", "太少")
 temp1 = temp1[:2] + ("lin", ) + temp1[2:]
 print(temp1)
 
+# 字符串操作
+str1 = "My love is xing!"
+print(str1[:6])
+print(str1[3])
+str1 = str1[:7] + " first" + str1[7:]
+print(str1)
+
+str2 = "spring"
+str2 = str2.capitalize()   # 字符串首字母改为大写
+print(str2)
+
+str2 = "SPRINsG"
+str2 = str2.casefold()    # 字符在中所有大写改为小写
+print(str2)
+
+str3 = str2.center(40)   # 字符串居中
+print(str3)
+
+num = str2.count("s")   # 字符或字符串在字符串中出现的次数统计
+print(num)
+print(str2.endswith("si"))
+print(str2.endswith("sg"))
 
 
+print(str2.find("dds"))
+print(str2.find("in"))
+
+print(str2.join("12112"))
 
 
+str2 = "       I love you yxc"
+print(str2)
+print(str2.lstrip())
 
 
+str2 = "kjkjsjkhkksio"   # 将字符串隔成3个字符串组成一个元组
+str2 = str2.partition("js")
+print(str2)
 
+str2 = "I love you yxc"
+str2 = str2.replace("yxc", "xxx")
+print(str2)
+print(str2.index("ov"))
+print(str2.rindex("o"))
+
+str2 = "  I love you   !   "
+print(str2.split("o"))    # 根据参数把字符串切成list，参数为空时，以空格为切点
+print(str2.strip())      # 去掉字符串左右两边的空格
+
+str2 = "My love is yxc, you know?"
+print(str2.translate(str2.maketrans("o", "0")))  # 用0替换掉字符串中所有的o
+print(str2.maketrans("o", "-"))
 
