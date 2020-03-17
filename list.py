@@ -73,11 +73,8 @@ list6.sort(reverse=True)  # 列表排序（倒序）
 print(list6)
 list7 = list6[:]   # 分片copy list6 与list7 = list6 的区别在于指向的对象列表不是同一主体
 print(list7)
-
-
 print(1111)
 # print("hello""\n", d1)
-
 
 # 元组（tuple）与list的区别
 '''
