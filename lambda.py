@@ -33,5 +33,3 @@ print("filter():", list(filter(lambda x: x % 2, range(20))))
 
 print("map():", list(map(lambda x: x / 2, range(10))))
 
-
-
