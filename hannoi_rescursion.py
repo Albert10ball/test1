@@ -18,8 +18,10 @@ def hannoi(n, x, y, z):
     if n == 1:
         print(x, "-->", z)
     else:
+
         hannoi(n-1, x, z, y)    # 将前n-1个盘子从x移动到y上
         print(x, "-->", z)      # 将最底下的一个盘子从x移动到z上
+
         hannoi(n-1, y, x, z)    # 将y上面的n-1个盘子通过x移动到z上
 
 
