@@ -1,4 +1,4 @@
 # test1
-- python shell
-- autoTest
-- selenium
+- python
+- learn python points
+
