@@ -3,6 +3,7 @@
 import requests
 import json
 
+
 def seach(kw):
 
     kw = {'wd': '长城'}
@@ -29,9 +30,16 @@ def seach(kw):
 
 
 # print(seach("sda"))
-url = "http://192.168.1.131:17004/jsonrpc"
 
+
+url = "http://192.168.1.143:17004/jsonrpc"
 headers = {"Content-Type": "application/json"}
+
+sender = "TNVTdTSPTXQudD2FBSefpQRkXTyhhtSjyEVAF"
+receiver = "TNVTdTSPTXQudD2FBSefpQRkXTyhhtSjyEVAF"
+passwd = "nuls123456"
+amount = 100000000*3
+remark = "test"
 
 
 def post(url, headers):
@@ -39,22 +47,29 @@ def post(url, headers):
     form_data = {
         "jsonrpc": "2.0",
         "method": "transfer",
-        "params": [5, 5, 1, "NERVEeTSPVcqUCdfVYWwrbuRtZ1oM6GpSgsgF5", "NERVEeTSPLGfeN8cS9tLBnYnjYjk4MrMabDgcK", "nuls123456", 100000000000, "test"],
+        "params": [5, 5, 1, sender, receiver, passwd, amount, remark],
         "id": 1234
     }
 
     response = requests.post(url, json=form_data, headers=headers)
 
-    print(response.url)
+    # print(response.url)
     # print(response.text)
 
     # 如果是json文件可以直接显示
-    print(response.json())
+    # print(response.json())
 
-    print(type(response.json()))
+    # print(type(response.json()))
     # response1 = response.json()
     print(response.json()["result"]["hash"])
+    assert response.json()["result"]["hash"]
     return "Pass"
 
 
 print(post(url, headers))
+
+# for i in range(0, 9000000):
+#    print("第%d次转账:" % i)
+#   post(url, headers)
+
+
