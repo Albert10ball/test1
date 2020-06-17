@@ -35,14 +35,15 @@ def seach(kw):
 url = "http://192.168.1.143:17004/jsonrpc"
 headers = {"Content-Type": "application/json"}
 
-sender = "TNVTdTSPTXQudD2FBSefpQRkXTyhhtSjyEVAF"
-receiver = "TNVTdTSPTXQudD2FBSefpQRkXTyhhtSjyEVAF"
+sender = "TNVTdTSPVcqUCdfVYWwrbuRtZ1oM6GpSgsgF5"
+
 passwd = "nuls123456"
-amount = 100000000*3
+amount = 100000000*300000
 remark = "test"
+receiverR = ["TNVTdTSPR2Kr1z287DHUv2W4AFcErZygo41u2"]
 
 
-def post(url, headers):
+def post(url, headers, receiver):
 
     form_data = {
         "jsonrpc": "2.0",
@@ -66,7 +67,11 @@ def post(url, headers):
     return "Pass"
 
 
-print(post(url, headers))
+lenth = len(receiverR)
+print(lenth)
+for i in range(0, lenth):
+    print(receiverR[i])
+    print(post(url, headers, receiverR[i]))
 
 # for i in range(0, 9000000):
 #    print("第%d次转账:" % i)
