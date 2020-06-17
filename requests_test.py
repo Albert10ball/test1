@@ -40,7 +40,7 @@ sender = "TNVTdTSPVcqUCdfVYWwrbuRtZ1oM6GpSgsgF5"
 passwd = "nuls123456"
 amount = 100000000*300000
 remark = "test"
-receiverR = ["TNVTdTSPR2Kr1z287DHUv2W4AFcErZygo41u2"]
+receiverR = ["TNVTdTSPQvEngihwxqwCNPq3keQL1PwrcLbtj"]
 
 
 def post(url, headers, receiver):
