@@ -33,7 +33,7 @@ def seach(kw):
 # print(seach("sda"))
 
 
-url = "http://beta.api.nerve.network/jsonrpc"
+url = "http://192.168.1.127/jsonrpc"
 headers = {"Content-Type": "application/json"}
 
 sender = "TNVTdTSPNEpLq2wnbsBcD8UDTVMsArtkfxWgz"
@@ -93,9 +93,12 @@ def post(url, headers, receiver):
 lenth = len(receiverR)
 print(lenth)
 for i in range(0, lenth):
-    print(receiverR[i], i)
-    print(post(url, headers, receiverR[i]))
-    time.sleep(1)
+    try:
+        print(receiverR[i], i)
+        print(post(url, headers, receiverR[i]))
+        time.sleep(1)
+    except BaseException as msg:
+        print(msg)
 
 # for i in range(0, 9000000):
 #     print("第%d次转账:" % i)

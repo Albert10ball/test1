@@ -26,7 +26,7 @@ header = {"Content-Type": "application/json"}
 
 def get_lastblock(url, header):
 
-    form_data ={
+    form_data = {
         "jsonrpc": "2.0",
         "method": "getBestBlockHeader",
         "params": [1],

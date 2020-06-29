@@ -39,9 +39,11 @@ def transfer(url, headers, receiver):
 lenth = len(receiverR)
 print(lenth)
 for i in range(0, lenth):
-    print(receiverR[i])
-    print(transfer(url, headers, receiverR[i]))
-
+    try:
+        print(receiverR[i])
+        print(transfer(url, headers, receiverR[i]))
+    except BaseException as msg:
+        print(msg)
 # for i in range(0, 9000000):
 #    print("第%d次转账:" % i)
 #   post(url, headers)
