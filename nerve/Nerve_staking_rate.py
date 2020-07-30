@@ -2,6 +2,7 @@
 
 n1 = int(input("请输入虚拟银行抵押的NVT数量："))
 n2 = int(input("请输入共识节点抵押的NVT数量："))
+n7 = int(input("请输入待共识节点抵押的NVT数量："))
 n3 = int(input("请输入抵押的活期NVT数量："))
 n4 = int(input("请输入抵押的三个月NVT数量："))
 n5 = int(input("请输入抵押的半年NVT数量："))
@@ -16,22 +17,26 @@ s3 = int(input("请输入抵押的一年NULS数量："))
 
 
 def sqrt(num):
-
     r = num ** 0.5
     return r
 
 
-value_nvt = n1 * sqrt(2*4) + n2 * sqrt(2*3) + n3 * sqrt(2*1) + n4 * sqrt(2*1.2) + n5 * sqrt(2*1.5) + n6 * sqrt(2*2)
+value_nvt = n1 * sqrt(2*4) + n2 * sqrt(2*3) + n7 * sqrt(2*1.5) + n3 * sqrt(2*1) + n4 * sqrt(2*1.2) + n5 * sqrt(2*1.5)\
+            + n6 * sqrt(2*2)
 
 value_nuls = (s0 * sqrt(2*1) + s1 * sqrt(2*1.2) + s2 * sqrt(2*1.5) + s3 * sqrt(2*2)) * ns
 value = value_nuls + value_nvt
 per = 86400 / value
+per_hour = 3600 / value
+print("当前总权重值为：%.2f" % (value_nvt + value_nuls))
+print(per_hour)
 
 nvt_rate1 = per * sqrt(2*4) * 365
 print("虚拟银行抵押NVT年利率为：%.2f%%" % (nvt_rate1 * 100))
 nvt_rate2 = per * sqrt(2*3) * 365
 print("共识节点抵押NVT年利率为：%.2f%%" % (nvt_rate2 * 100))
-print("")
+nvt_rate7 = per * sqrt(2*1.5) * 365
+print("待共识节点抵押NVT年利率为：%.2f%%" % (nvt_rate7 * 100))
 nvt_rate3 = per * sqrt(2*1) * 365
 print("NVT活期抵押年利率为：%.2f%%" % (nvt_rate3 * 100))
 nvt_rate4 = per * sqrt(2*1.2) * 365

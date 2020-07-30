@@ -1,7 +1,7 @@
 # encoding = utf-8
 
 import unittest
-from mydict import Dict
+from learn.mydict import Dict
 
 
 class TestDict(unittest.TestCase):
