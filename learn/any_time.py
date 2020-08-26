@@ -40,7 +40,7 @@ def date_to_timestamp(date, format_string="%Y-%m-%d %H:%M:%S"):
 
 
 # 不同时间格式字符串的转换
-def date_style_transfomation(date, format_string1="%Y-%m-%d %H:%M:%S",format_string2="%Y-%m-%d %H-%M-%S"):
+def date_style_transfomation(date, format_string1="%Y-%m-%d %H:%M:%S", format_string2="%Y-%m-%d %H-%M-%S"):
     time_array = time.strptime(date, format_string1)
     str_date = time.strftime(format_string2, time_array)
     return str_date

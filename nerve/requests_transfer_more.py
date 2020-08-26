@@ -7,7 +7,7 @@ url = "http://192.168.1.128:17004/jsonrpc"
 headers = {"Content-Type": "application/json"}
 sender = "TNVTdTSPVcqUCdfVYWwrbuRtZ1oM6GpSgsgF5"
 passwd = "nuls1234"
-amount = 100000000*220000
+amount = 100000000*300000
 amount2 = 100000000*10
 remark = "test"
 # receiverR = request_create_account.create(url, headers, 4)
@@ -24,9 +24,14 @@ remark = "test"
 #              "TNVTdTSPGQc9eSCkUbnwVyJuBCaM4Zj2PVpvN", "TNVTdTSPNANf4E2b5xCTp8GJ8Cr2x7bk5Rgcf",
 #              "TNVTdTSPHJLKmt4PV97Uik98XfRziRYzQZihu", "TNVTdTSPJ6woewNz5XdaT35KCGRp5YXQ4mkfX",
 #              "TNVTdTSPQpDjXBekoTSJE8M4jtzrkz5p3HA89", "TNVTdTSPM2zQmR8UkuYd9ZRfG7uDPGKjpSBvF",
-#              "TNVTdTSPKXcH2Vu4uDWobS4H9o3YadH5hv2KR", "TNVTdTSPJYQnTobMK2XNgU8L4wsqFUy1irYQS"]
+#              "TNVTdTSPKXcH2Vu4uDWobS4H9o3YadH5hv2KR", "TNVTdTSPJYQnTobMK2XNgU8L4wsqFUy1irYQS",
+#              "TNVTdTSPEn3kK94RqiMffiKkXTQ2anRwhN1J9", "TNVTdTSPEoVRZJ9VLZa92hGFDNc2hA32UnH6A",
+#              "TNVTdTSPGQeHfn5U31nxSqSMP8KSwDNG2qWGF", "TNVTdTSPVf5iJ4f42B48B95kY5rWzSUAcbv19",
+#              "TNVTdTSPMWFxjAkC44yy1siKtejoALes9xTL9", "TNVTdTSPQkaer2rYwvZy14A8N5omH67o3DVs3"]
 
-receiverR = ["TNVTdTSPEn3kK94RqiMffiKkXTQ2anRwhN1J9"]
+receiverR = [ "TNVTdTSPUk4eFCJNFjBYHwxGvuiq8fcRFqvv3", "TNVTdTSPHJGCfgFkQVW1z7BB1seYsRLUX8D4C",
+              "TNVTdTSPTfWYDyM3C6DqLGpRtezzPcKWdvjbR", "TNVTdTSPMaHzALJprL6xduu29pVmBg2iQYcE3",
+              "TNVTdTSPJFUZgSvDJQ8isfd7Q2xpq7ZvGsEap"]
 print(receiverR)
 
 
