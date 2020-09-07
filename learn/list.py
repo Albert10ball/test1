@@ -44,10 +44,10 @@ if list1 < list2:
 else:
     print(2)
 
-list3 = list1 + list2
-print(list3)
+list1 = list1 + list2
+print(list1)
 
-list4 = list3*3
+list4 = list1*3
 print(list4)
 
 t1 = "lin" not in list4

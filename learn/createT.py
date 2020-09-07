@@ -1,6 +1,4 @@
 # encoding=utf-8
-import time
-import string
 import random
 
 
