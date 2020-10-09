@@ -29,9 +29,11 @@ def excel():
     # return dat
     workbook = xlrd.open_workbook("C:\\Users\\Albert\\Desktop\\Nerve测试网节点奖励注册表.xlsx")
     sheet = workbook.sheet_by_name("Sheet1")
+    # 获取excel行数
     nrows = sheet.nrows
     print(nrows)
     # cols = sheet.ncols
+    # 读取excel第二列所有行的数据存入dat列表中
     dat = []
     for i in range(0, nrows):
         cells = sheet.col_values(1)

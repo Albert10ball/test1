@@ -58,7 +58,9 @@ expecse = getlist()
 address3 = expecse[0]
 value3 = expecse[1]
 # 需要写入的数据
-workbook = xlsxwriter.Workbook('D:\\Company\\LCC\\LCC空投发放记录.xlsx')
+
+cdate = str(time.strftime("%Y%m%d %H:%M:%S"))[:8]
+workbook = xlsxwriter.Workbook('D:\\Company\\LCC\\LCC空投发放记录' + cdate + '.xlsx')
 worksheet = workbook.add_worksheet("LCC发放记录表")
 # 行列初始位置
 row = 0

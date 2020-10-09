@@ -13,7 +13,7 @@ def now_to_timestamp(digits=10):
 
 # 将时间戳规范为10位时间戳
 def timestamp_to_timestamp10(time_stamp):
-    time_stamp = int (time_stamp * (10 ** (10-len(str(time_stamp)))))
+    time_stamp = int(time_stamp * (10 ** (10-len(str(time_stamp)))))
     return time_stamp
 
 
@@ -36,6 +36,7 @@ def timestamp_to_date(time_stamp, format_string="%Y-%m-%d %H:%M:%S"):
 def date_to_timestamp(date, format_string="%Y-%m-%d %H:%M:%S"):
     time_array = time.strptime(date, format_string)
     time_stamp = int(time.mktime(time_array))
+    print(time_stamp)
     return time_stamp
 
 

@@ -2,13 +2,14 @@
 __author__ = "Albert"
 
 
-from token_transfer import getContractTokens
+import time
+from nerve import search
 
-url = "https://public1.nuls.io/jsonrpc"
-headers = {"Content-Type": "application/json"}
-contract = "NULSd6Hgvzkzkmc6b7c6hjjekuR4BasdG3twL"
+print(time.ctime())
+print(time.localtime())
+
+time1 = str(time.strftime("%Y%m%d %H:%M:%S"))[:8]
+print(time1)
+print(search.search("3000").json()["result"]["type"])
 
 
-res = getContractTokens.get_contract_tokens(url, headers, 142, 10, contract)
-address = res[0]
-print(address)
